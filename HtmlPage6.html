@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        var student = { "name": "mahesh", "Id": 123, "college": "svce", "address": "Bagalore" };
+        var typeObj = JSON.stringify(student);
+        document.writeln("<b>I am from Stringify :  <b>" + typeof (typeObj) + '<br>');
+        var typeJson = JSON.parse(typeObj);
+        document.writeln("<b>I am from Parse :   <b>" + typeof (typeJson));
+    </script>
+
+    <script>
+        class Employee {
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+            }
+            detail() {
+                document.writeln(this.id + " " + this.name + "<br>")
+            }
+        }
+        var e1 = new Employee(101, "Martin Roy");
+        var e2 = new Employee(102, "Duke William");
+     //   e1.detail(); 
+        //  e2.detail();
+        var t1 = JSON.stringify(e1);
+        document.writeln("<br><br>From class :"+typeof (t1)+"<br>");
+        var t2 = JSON.parse(t1);
+        document.writeln("From class :"+typeof (t2)+"<br>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

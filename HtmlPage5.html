@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function fun() {
+
+
+            var output = "";
+            var text =
+                [
+                    { "firstName": "mahesh", "lastName": "pothuluru" },
+                    { "firstName": "naresh", "lastName": "seemdora" },
+                    { "firstName": "narasimha", "lastName": "katta" }
+                ];
+            var j = 1;
+            for (var i = 0; i < text.length; i++) {
+                output = output + j + ". firstName :" + text[i].firstName + "     LastName :" + text[i].lastName+'<br>';
+                j++;
+            }
+            document.getElementById('text').innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    <div id="text"></div>
+   <center> <input type="submit" value="JSON list" onclick="fun()"/></center>
+</body>
+</html>
